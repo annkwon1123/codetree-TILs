@@ -7,7 +7,7 @@ bool IsYunYear(int n) {
             if(n%400 == 0) return true;
             else return false;
         } else return true;
-    } else return flase;
+    } else return false;
 }
 
 int main() {
