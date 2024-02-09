@@ -9,8 +9,8 @@ string Complex(int n) {
         add += n%10;
         n = (n-1)/10;
     }
-    if(add % 5 != 0) return "No";
-    else return "Yes"; // true
+    if(add % 5 == 0) return "Yes";
+    else return "No"; 
 
 }
 int main() {
