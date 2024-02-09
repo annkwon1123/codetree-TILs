@@ -7,7 +7,7 @@ string Complex(int n) {
     int add = 0;
     while(n == 0) {
         add += n%10;
-        n = (n-1)/10;
+        n = (n-n%10)/10;
     }
     if(add % 5 == 0) return "Yes";
     else return "No"; 
