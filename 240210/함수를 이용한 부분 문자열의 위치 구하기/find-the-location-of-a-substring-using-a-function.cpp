@@ -8,7 +8,7 @@ int SubStr(string ss) {
     int count = 1;
     int len = str.length();
     int subLen = ss.length();
-    for(int i = 0; i < len-subLen+3; i++) {
+    for(int i = 0; i < len; i++) {
         if(str[i] == ss[0]) {
             for(int j = 1; j < subLen; j++) {
                 if(str[i+j] == ss[j]) count++; 
