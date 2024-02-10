@@ -15,7 +15,7 @@ int SubStr(string ss) {
             }
             if(count == subLen) return i;
         }
-        count = 0;
+        count = 1;
     }
     return -1;
 }
