@@ -7,9 +7,11 @@ int main() {
     int n;
     string a, b;
     cin >> n >> a;
+    int count =0;
     for(int i = 0; i < n; i ++) {
         cin >> b;
-        if(a == b) cout << i;
+        if(a == b) count ++;
     }
+    cout << count << endl;
     return 0;
 }
