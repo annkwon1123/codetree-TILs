@@ -14,6 +14,7 @@ int SubStr(string ss) {
                 if(str[i+j] == ss[j]) count++; 
             }
             if(count == subLen) return i;
+            else count = 0;
         }
     }
     return -1;
