@@ -7,7 +7,7 @@ int main() {
     cin >> n;
     n *= 30.48;
     cout << fixed;
-    cout.precision(2);
+    cout.precision(1);
     cout << n;
 
     return 0;
