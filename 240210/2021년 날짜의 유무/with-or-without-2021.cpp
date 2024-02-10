@@ -7,6 +7,7 @@ bool Exist(int m, int d) {
     // 30일까지 4,6,9,11월
     else if(m == 4 || m == 6 || m == 9 || m == 11) {
         if(d > 30) return false;
+        else return true;
     }
     else return true;
 }
