@@ -38,6 +38,8 @@ int main() {
         cin >> a >> b >> c;
         students[i] = Student(a,b,c);
     }
+    cout << fixed;
+	cout.precision(1);
 
     sort(students, students+MAX_N, NameCmp);
 
