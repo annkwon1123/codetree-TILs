@@ -18,7 +18,7 @@ class Forecast {
         Forecast() {}
 
         bool operator < (Forecast & forecast) {
-            return this->date > forecast.date;
+            return this->date < forecast.date;
         }
 
 };
@@ -34,9 +34,14 @@ int main() {
         cin >> a >> b >> c;
         forecasts[i] = Forecast(a,b,c);
     }
-    
+    int index;
     sort(forecasts, forecasts+n);
-
-    cout << forecasts[0].date << " " << forecasts[0].week << " " << forecasts[0].wether;
+    for(int i = 0; i < n; i++) {
+        if(forecasts[i].wether == "Rain") {
+            index = i;
+            break;
+        }
+    }
+    cout << forecasts[index].date << " " << forecasts[index].week << " " << forecasts[index].wether;
     return 0;
 }
