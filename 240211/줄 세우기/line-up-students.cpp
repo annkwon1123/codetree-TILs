@@ -18,7 +18,10 @@ class Student {
 Student studetns[MAX_N];
 
 bool Cmp(Student a, Student b) {
-    if(a.h == b.h) return a.w > b.w;
+    if(a.h == b.h) {
+        if(a.w == b.w) return a.number < a.number;
+        return a.w > b.w;
+    }
     return a.h > b.h;
 }
 
