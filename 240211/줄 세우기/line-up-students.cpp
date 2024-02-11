@@ -7,7 +7,7 @@ class Student {
     public:
         int w,h, number;
 
-        Student(int w, int h, int number) {
+        Student(int h, int w, int number) {
             this->w = w;
             this->h = h;
             this->number = number;
@@ -32,6 +32,6 @@ int main() {
         studetns[i] = Student(a,b,i+1);
     }
     sort(studetns, studetns+n, Cmp);
-    for(int i = 0; i < n; i++) cout << studetns[i].w << " " << studetns[i].h << " " << studetns[i].number << endl;
+    for(int i = 0; i < n; i++) cout << studetns[i].h << " " << studetns[i].w << " " << studetns[i].number << endl;
     return 0;
 }
