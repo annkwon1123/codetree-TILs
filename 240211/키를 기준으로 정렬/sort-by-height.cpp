@@ -38,7 +38,7 @@ int main() {
 
     sort(students, students+n, cmp);
 
-    for(int i = 0; i < 5; i++) {
+    for(int i = 0; i < n; i++) {
         cout << students[i].name << " " << students[i].h << " " << students[i].w << endl;
     }
 
