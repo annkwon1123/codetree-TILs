@@ -8,7 +8,7 @@ bool compare(tuple<int,int,int> a, tuple<int,int,int> b) {
     int a1,a2,a3,b1,b2,b3;
     tie(a1,a2,a3) = a;
     tie(b1,b2,b3) = b;
-    if(a1 = b1) return a2 < b2;
+    if(a1 == b1) return a2 > b2;
     return a1 < b1;
 }
 
@@ -22,7 +22,7 @@ int main() {
         cin >> a >> b;
         v.push_back(tuple<int,int,int>(a,b,i+1));
     }
-    sort(v.begin(), v.end());
+    sort(v.begin(), v.end(), compare);
     for(int i = 0; i < n; i++) {
         int a,b,c;
         tie(a,b,c) = v[i];
