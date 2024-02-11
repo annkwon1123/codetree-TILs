@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#define MAXN 10
 using namespace std;
 
 class Student {
@@ -21,11 +22,12 @@ bool cmp(Student a, Student b) {
     return a.h < b.h;
 }
 
+Student students[MAXN];
+
 int main() {
     // 여기에 코드를 작성해주세요.
     int n;
     cin >> n;
-    Student* students = new Student[n];
 
     for(int i = 0; i < n; i++) {
         string a;
