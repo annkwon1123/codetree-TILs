@@ -13,7 +13,7 @@ int main() {
     for(int i = 0; i < 2*n; i++) cin >> arr[i];
     sort(arr, arr+2*n);
     int max = 0;
-    for(int i = 0; i < 2*n; i++) {
+    for(int i = 0; i < n; i++) {
         if(arr[i] + arr[(2*n-1)-i] > max) {
             max = arr[i] + arr[(2*n-1)-i];
         }
