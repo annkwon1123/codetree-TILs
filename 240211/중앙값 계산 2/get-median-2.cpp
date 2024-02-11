@@ -8,8 +8,8 @@ int main() {
     cin >> n;
     int arr[n];
     for(int i = 0; i < n; i++) cin >> arr[i];
-    sort(arr, arr+n);
     for(int i = 0; i < n; i+=2) {
+        sort(arr, arr+i+1);
         cout << arr[i/2] << " ";
     }
     return 0;
