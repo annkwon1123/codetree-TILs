@@ -19,7 +19,10 @@ class Distance {
 Distance distances[MAX_N];
 
 bool Cmp(Distance a, Distance b) {
-    return (a.x * a.x + a.y * a.y) < (b.x * b.x + b.y * b.y);
+    int dis_a = a.x * a.x + a.y * a.y;
+    int dis_b = b.x * b.x + b.y * b.y;
+    if(dis_a == dis_b) return a.number > b.number;
+    return dis_a < dis_b;
 }
 
 int main() {
