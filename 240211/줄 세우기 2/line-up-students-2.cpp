@@ -8,7 +8,7 @@ bool compare(tuple<int,int,int> a, tuple<int,int,int> b) {
     int a1,a2,a3,b1,b2,b3;
     tie(a1,a2,a3) = a;
     tie(b1,b2,b3) = b;
-    if(a1 = b1) return a2 > b2;
+    if(a1 = b1) return a2 < b2;
     return a1 < b1;
 }
 
