@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-#define MAX_N 10
+#define MAX_N 1000
 using namespace std;
 
 class Student {
@@ -32,6 +32,10 @@ int main() {
         studetns[i] = Student(a,b,i+1);
     }
     sort(studetns, studetns+n, Cmp);
-    for(int i = 0; i < n; i++) cout << studetns[i].h << " " << studetns[i].w << " " << studetns[i].number << endl;
+    for(int i = 0; i < n; i++) {
+        cout << studetns[i].h << " ";
+        cout << studetns[i].w << " ";
+        cout << studetns[i].number << endl;
+    }
     return 0;
 }
