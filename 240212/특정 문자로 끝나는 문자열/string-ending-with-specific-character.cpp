@@ -9,11 +9,15 @@ int main() {
     for(int i = 0; i < MAX_N; i++) cin >> str[i];
     char c;
     cin >> c;
-    int len;
+    int len, cnt = 0;
     for(int i = 0; i < MAX_N; i++) {
         len = str[i].length();
-        if(str[i][len-1] == c) cout << str[i] << endl;
+        if(str[i][len-1] == c) {
+            cout << str[i] << endl;
+            cnt++;
+        }
     }
+    if(cnt == 0) cout << "None";
     
     return 0;
 }
