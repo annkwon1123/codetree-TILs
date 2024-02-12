@@ -9,7 +9,7 @@ int main() {
     int n;
     cin >> n;
     int len = str.length();
-    if(n >= len) cout << str;
-    else {for(int i = 0; i < n; i++) cout << str[len -i-1];}
+    if(n >= len) n = len;
+    for(int i = 0; i < n; i++) cout << str[len -i-1];
     return 0;
 }
