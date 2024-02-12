@@ -6,7 +6,7 @@ int main() {
     int arr[10];
     double tot = 0;
     int i = 0;
-    for(i = 0; i < 9; i++) {
+    for(i = 0; i < 10; i++) {
         cin >> arr[i];
         if(arr[i] >= 250) break;
         tot += arr[i];
