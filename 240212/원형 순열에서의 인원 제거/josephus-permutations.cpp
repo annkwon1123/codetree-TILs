@@ -16,7 +16,7 @@ int main() {
             count++;
         }
         else {
-            cout << q.front() << endl;
+            cout << q.front() << " ";
             q.pop();
             count = 1;
         }
