@@ -15,18 +15,19 @@ int main() {
     
     char c;
     list<char>::iterator it;
+
     it = l.end();
     for(int i = 0; i < m; i++) {
         cin >> c;
         if(c == 'L') {
-            it--;
+            if(it != l.begin()) it--;
         } else if(c == 'P') {
             cin >> c;
             l.insert(it, c);
         } else if(c == 'R') {
-            it++;
+            if(it != l.end()) it++;
         } else {
-            l.erase(it);
+            if(it != l.end()) it = l.erase(it);
         }
     }
     
