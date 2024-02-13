@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/soyeon/Git/codetree-TILs/cpp/[Youtube]DongBinNa/tiling'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z6tilingi, symObjAddr: 0x0, symBinAddr: 0x100003E64, symSize: 0xE8 }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _dyn, symObjAddr: 0x53E0, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x2C88, offset: 0x2C88, size: 0x8, addend: 0x0, symName: __Z6tilingi, symObjAddr: 0x0, symBinAddr: 0x100003E64, symSize: 0xE8 }
+  - { offsetInCU: 0x2CB4, offset: 0x2CB4, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xE8, symBinAddr: 0x100003F4C, symSize: 0x44 }
+...
