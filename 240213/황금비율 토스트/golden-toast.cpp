@@ -16,7 +16,7 @@ int main() {
     char c;
     list<char>::iterator it;
     it = l.end();
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < m; i++) {
         cin >> c;
         if(c == 'L') {
             it--;
@@ -25,8 +25,8 @@ int main() {
             l.insert(it, c);
         } else if(c == 'R') {
             it++;
-        } else {
-            l.erase(it);
+        } else if(c == 'D'){
+            it = l.erase(it);
         }
     }
     
