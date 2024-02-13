@@ -25,8 +25,8 @@ int main() {
             l.insert(it, c);
         } else if(c == 'R') {
             it++;
-        } else if(c == 'D'){
-            it = l.erase(it);
+        } else {
+            l.erase(it);
         }
     }
     
