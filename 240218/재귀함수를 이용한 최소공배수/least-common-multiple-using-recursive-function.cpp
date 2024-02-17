@@ -8,11 +8,12 @@ int ans = 8*9*5*7;
 
 int MinMul(int x) {
     if(x == 0) return arr[0];
+    else if(arr[x] == 1) return 1;
     else if(ans > 1 && ans%arr[x] == 0) {
         ans /= arr[x];
         return MinMul(x-1) * arr[x];
     }
-    else return MinMul(x-1);
+    return MinMul(x-1);
 }
 
 int main() {
@@ -20,7 +21,7 @@ int main() {
     int n;
     cin >> n;
     for(int i = 0; i < n; i++) cin >> arr[i]; // 1 5 7 9 2 6
-    sort(arr, arr+n);
+    sort(arr, arr+n); // 1 2 5 6 7 9
     cout << MinMul(n-1);
     return 0;
 }
