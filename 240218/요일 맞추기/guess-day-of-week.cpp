@@ -14,9 +14,13 @@ int main() {
     int take_days2 = m2 * arr1[m2] + d2;
     int days = 0;
 
-    if(take_days1 < take_days2) days = take_days2 - take_days1;
-    else days = take_days1 - take_days2;
-    cout << arr2[days%7-1];
-
+    if(take_days1 < take_days2) {
+        days = take_days2 - take_days1;
+        cout << arr2[days%7+1];
+    }
+    else {
+        days = take_days1 - take_days2;
+        cout << arr2[days%7-1];
+    }
     return 0;
 }
