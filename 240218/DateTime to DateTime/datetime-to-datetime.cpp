@@ -9,10 +9,10 @@ int main() {
     if(a < 11) take_min = -1;
     else if(a == 11 && b < 11) take_min = -1;
     else if(a == 11 && b == 11 && c < 11) take_min = -1;
-    
-    take_min += a*24*60 + b*60 + c;
-    take_min -= 11*24*60 + 11*60 + 11;
-
+    else {
+        take_min += a*24*60 + b*60 + c;
+        take_min -= 11*24*60 + 11*60 + 11;
+    }
     cout << take_min;
     return 0;
 }
