@@ -3,24 +3,35 @@
 #define MAX_N 10
 using namespace std;
 
-int arr[MAX_N]; 
-int ans = 8*9*5*7;
+int arr[MAX_N];
 
-int MinMul(int x) {
-    if(arr[x] == 1) return 1;
-    else if(ans > 1 && ans%arr[x] == 0 && ans/arr[x] != 0) {
-        ans /= arr[x];
-        return MinMul(x-1) * arr[x];
-    }
-    return MinMul(x-1);
+// Function to calculate Greatest Common Divisor (GCD)
+int GCD(int a, int b) {
+    if (b == 0)
+        return a;
+    return GCD(b, a % b);
+}
+
+// Function to calculate Least Common Multiple (LCM)
+int LCM(int a, int b) {
+    return (a * b) / GCD(a, b);
 }
 
 int main() {
-    // 여기에 코드를 작성해주세요.
     int n;
     cin >> n;
-    for(int i = 0; i < n; i++) cin >> arr[i]; // 1 5 7 9 2 6
-    sort(arr, arr+n); // 1 2 5 6 7 9
-    cout << MinMul(n-1);
+    
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+    
+    sort(arr, arr + n);
+    
+    int lcm = arr[0];
+    for (int i = 1; i < n; i++) {
+        lcm = LCM(lcm, arr[i]);
+    }
+    
+    cout << lcm;
+    
     return 0;
 }
