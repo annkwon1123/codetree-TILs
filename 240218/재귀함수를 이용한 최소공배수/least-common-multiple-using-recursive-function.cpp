@@ -8,7 +8,7 @@ int ans = 8*9*5*7;
 
 int MinMul(int x) {
     if(arr[x] == 1) return 1;
-    else if(ans > 1 && ans%arr[x] == 0) {
+    else if(ans > 1 && ans%arr[x] == 0 && ans/arr[x] != 0) {
         ans /= arr[x];
         return MinMul(x-1) * arr[x];
     }
