@@ -11,14 +11,14 @@ int main() {
     string arr2[7] = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
 
     int take_days = 0;
-    while(month == m2 && day == d2) {
+    do {
         take_days ++;
         day ++;
         if(day > arr[month]) {
             month++;
             day = 1;
         }
-    }
+    } while(month == m2 && day == d2);
 
     cout << arr2[take_days%7];
 
