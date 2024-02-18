@@ -10,7 +10,7 @@ int main() {
     int arr[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
     string arr2[7] = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
 
-    int take_days = 0;
+    int take_days = 1;
     do {
         take_days ++;
         day ++;
@@ -20,7 +20,7 @@ int main() {
         }
     } while(month == m2 && day == d2);
 
-    cout << arr2[take_days%7];
+    cout << arr2[take_days%7+1];
 
 
     return 0;
