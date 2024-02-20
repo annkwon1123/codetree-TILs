@@ -12,7 +12,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         if(i == 0 || arr[i] == arr[i-1]) {
             cnt++;
-        }
+        } else cnt = 0;
         if(cnt > max) max = cnt;
     }
 
