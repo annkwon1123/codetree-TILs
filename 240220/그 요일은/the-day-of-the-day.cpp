@@ -2,35 +2,28 @@
 #include <string>
 using namespace std;
 
+int Days(int m, int d) {
+    int tot = 0;
+    int arr1[13] = {0,31,29,31,30,31,30,31,31,30,31,30,31};
+    for(int i = 1; i < m; i++) tot += arr1[m];
+    tot += d;
+    return tot;
+}
 int main() {
     // 여기에 코드를 작성해주세요.
     int m1,d1,m2,d2;
     cin >> m1 >> d1 >> m2 >> d2;
 
-    int arr1[13] = {0,31,29,31,30,31,30,31,31,30,31,30,31};
     string arr2[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
     
     int wd = 0; // week day
     string str; //cin buffer
-    cin >> str;
+    cin >> str; // 요일 저장
     for(int i = 0; i < 7; i ++) {
-        if(str == arr2[i]) wd = i; // 요일 순서 저장
+        if(str == arr2[i]) wd = i; // 요일 번호 저장
     }
-    
-    int cnt = 0;
-    while(true) {
-        if(m1 == m2 && d1 == d2) break;
-        d1++;
-        wd++;
-        if(d1 > arr1[m1]) {
-            d1 = 1;
-            m1++;
-        }
-        if(wd > 6) {
-            wd = 0;
-            cnt++;
-        }
-    }
-    cout << cnt;
+
+    int diff = Days(m2,d2) - Days(m1,d1);
+    cout << diff/7;
     return 0;
 }
