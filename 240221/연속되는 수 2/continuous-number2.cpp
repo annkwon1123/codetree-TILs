@@ -8,9 +8,9 @@ int main() {
     int arr[n] = {0,};
     for(int i = 0; i < n; i++) cin >> arr[i];
 
-    int max = 0, cnt = 0;
-    for(int i = 0; i < n; i++) {
-        if(i == 0 || arr[i] == arr[i-1]) {
+    int max = 1, cnt = 1;
+    for(int i = 1; i < n; i++) {
+        if(arr[i] == arr[i-1]) {
             cnt++;
         } else {
             if(cnt > max) max = cnt;
