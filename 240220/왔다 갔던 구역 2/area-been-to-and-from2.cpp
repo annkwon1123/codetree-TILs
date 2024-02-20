@@ -41,7 +41,7 @@ int main() {
     }
     int cnt = 0;
     for(int i = 0; i < MAX_R; i++) {
-        if(arr[i] >= 2) {
+        if(checked[i] >= 2) {
             cnt++;
             // cout << i << " " << arr[i] << endl;
         }
