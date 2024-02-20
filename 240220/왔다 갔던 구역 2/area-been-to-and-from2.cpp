@@ -14,19 +14,24 @@ int main() {
         cin >> x >> D;
         // cout << init << endl;
         if(D == 'R') {
-            for(int j = init; j < init + x; j++) arr[j]++;
+            for(int j = init; j <= init + x; j++) arr[j]++;
             init = init + x;
         } else if(D == 'L'){
-            for(int j = init; j > init - x; j--) arr[j]++;
+            for(int j = init; j >= init - x; j--) arr[j]++;
             init = init - x;
         }
+        // cout << init << endl;
     }
+    int chk = 0;
     int cnt = 0;
     for(int i = 0; i < MAX_N; i++) {
         if(arr[i] >= 2) {
+            if(chk == 0) cnt--;
             cnt++;
-            // cout << i << " " << arr[i]<< endl;
-        }
+            chk++;
+            // cout << i << " " << cnt << endl;
+        } else chk = 0;
+
     }
     cout << cnt;
     return 0;
