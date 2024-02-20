@@ -8,16 +8,19 @@ int main() {
     int max = 0;
     int min = 0;
     int cur = 0;
-
+    int x;
+    char D1, D2 = ' ';
     for(int i = 0; i < n; i++) {
-        int x;
-        char D;
-        cin >> x >> D;
-        if(D == 'L') {
+        cin >> x >> D1;
+        if(D1 == 'L') {
             cur -= x;
+            if(D2 == D1) cur += 1;
+            D2 = D1;
             if(cur < min) min = cur;
-        } else if(D == 'R') {
+        } else if(D1 == 'R') {
             cur += x;
+            if(D2 == D1) cur -= 1;
+            D2 = D1;
             if(cur > max) max = cur;
         }
     }
