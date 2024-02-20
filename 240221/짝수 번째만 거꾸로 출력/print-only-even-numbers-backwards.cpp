@@ -7,7 +7,10 @@ int main() {
     string str;
     cin >> str;
     int n = str.length();
-    for(int i = n-1; i >= 0; i -= 2) {
+    int i;
+    if(n%2 == 0) i = n-1;
+    else i = n-2;
+    for(i = i; i >= 0; i -= 2) {
         cout << str[i];
     }
     return 0;
