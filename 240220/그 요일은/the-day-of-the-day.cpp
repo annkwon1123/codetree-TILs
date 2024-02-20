@@ -9,30 +9,21 @@ int Days(int m, int d) {
     tot += d;
     return tot;
 }
-
 int main() {
+    // 여기에 코드를 작성해주세요.
     int m1,d1,m2,d2;
     cin >> m1 >> d1 >> m2 >> d2;
 
     string arr2[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
     
-    int wd = 0; // 요일
-    string str; // cin buffer
+    int wd = 0; // week day
+    string str; //cin buffer
     cin >> str; // 요일 저장
     for(int i = 0; i < 7; i ++) {
         if(str == arr2[i]) wd = i; // 요일 번호 저장
     }
     
     int diff = Days(m2,d2) - Days(m1,d1);
-    int numOfWeeks = diff/7; // 전체 주 수
-    int remainingDays = diff % 7; // 남은 일 수
-    
-    // 시작 요일을 기준으로 남은 일 수를 더해줍니다.
-    int startingDayIndex = wd - (remainingDays % 7);
-    if (startingDayIndex < 0) {
-        startingDayIndex += 7;
-    }
-
-    cout << numOfWeeks << endl;
+    cout << diff/7;
     return 0;
 }
