@@ -27,7 +27,7 @@ int main() {
         }
     }
 
-    cout << wd/7;
+    cout << (wd+1)/7;
 
     return 0;
 }
