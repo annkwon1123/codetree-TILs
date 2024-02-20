@@ -6,7 +6,7 @@ int main() {
     int n, t;
     cin >> n >> t;
     int arr[n];
-    // 1 6 7 8
+    
     int cnt = 0, max = 0;
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
@@ -20,6 +20,8 @@ int main() {
         }
     }
     if(cnt > max) max = cnt;
-    cout << max;
+    if(cnt == 1) cout << 0;
+    else cout << max;
+    
     return 0;
 }
