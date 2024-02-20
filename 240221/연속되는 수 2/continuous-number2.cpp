@@ -7,8 +7,8 @@ int main() {
     cin >> n;
     int arr[n] = {0,};
     for(int i = 0; i < n; i++) cin >> arr[i];
-
-    int max = 1, cnt = 1;
+    // 7 2 7 7 7 7 5 7
+    int max = 0, cnt = 1;
     for(int i = 1; i < n; i++) {
         if(arr[i] == arr[i-1]) {
             cnt++;
