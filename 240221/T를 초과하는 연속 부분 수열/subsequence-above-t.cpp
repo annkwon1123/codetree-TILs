@@ -11,17 +11,14 @@ int main() {
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
         if(arr[i] > 3) {
-            if(i == 0 || arr[i] > arr[i-1]) {
-                cnt++;
-            }
+            cnt++;
         } else {
             if(cnt > max) max = cnt;
             cnt = 0;
         }
     }
     if(cnt > max) max = cnt;
-    if(cnt == 1) cout << 0;
-    else cout << max;
+    cout << max;
     
     return 0;
 }
