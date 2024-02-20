@@ -16,9 +16,14 @@ int main() {
             cnt = 1;
         }
     }
-    cout << 2 * v.size() << endl;
+
+    str = "";
     for(int i = 0; i < v.size(); i++) {
-        cout << v[i].first << v[i].second;
+        str += v[i].first;
+        str += to_string(v[i].second);
     }
+
+    cout << str.length() << endl;
+    cout << str;
     return 0;
 }
