@@ -22,6 +22,6 @@ int main() {
         }
     }
 
-    cout << cur - min +1 << " " << max - cur -1;
+    cout << max - cur << " " << cur - min;
     return 0;
 }
