@@ -9,18 +9,30 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int x1,y1,x2,y2;
     cin >> x1 >> y1 >> x2 >> y2;
+    x1 += OFFSET;
+    y1 += OFFSET;
+    x2 += OFFSET;
+    y2 += OFFSET;
     for(int i = x1; i < x2; i++) {
         for(int j = y1; j < y2; j++) {
             arr[i][j] = 1;
         }
     }
     cin >> x1 >> y1 >> x2 >> y2;
+    x1 += OFFSET;
+    y1 += OFFSET;
+    x2 += OFFSET;
+    y2 += OFFSET;
     for(int i = x1; i < x2; i++) {
         for(int j = y1; j < y2; j++) {
             arr[i][j] = 1;
         }
     }
     cin >> x1 >> y1 >> x2 >> y2;
+    x1 += OFFSET;
+    y1 += OFFSET;
+    x2 += OFFSET;
+    y2 += OFFSET;
     for(int i = x1; i < x2; i++) {
         for(int j = y1; j < y2; j++) {
             arr[i][j] = -1;
