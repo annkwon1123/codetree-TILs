@@ -9,13 +9,14 @@ int main() {
     int cnt = 1, max = 0;
     for(int i = 1; i <= n; i++) {
         cin >> arr[i];
-        if(i != n && arr[i] > arr[i-1]) {
+        if(arr[i] > arr[i-1]) {
             cnt++;
         } else {
             if(cnt > max) max = cnt;
             cnt = 1;
         }
     }
+    if(cnt > max) max = cnt;
 
     cout << max;
     return 0;
