@@ -24,6 +24,7 @@ int main() {
     }
 
     int diff = Days(m2,d2) - Days(m1,d1);
-    cout << diff/7;
+    if(diff < 6) cout << 1;
+    else cout << diff/7; // 몇 주가 있는가
     return 0;
 }
