@@ -1,37 +1,50 @@
 #include <iostream>
 #define MAX_N 200
+#define MAX_R 2000
+#define OFFSET 1000
 using namespace std;
+
+int n;
+int x1[MAX_N], x2[MAX_N];
+
+int checked[MAX_R+1];
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    int n;
     cin >> n;
-    int init = 100;
-    int arr[MAX_N] = {0,};
+
+    int cur = 0;
+
     for(int i = 0; i < n; i++) {
-        int x;
+        int x; //distance
         char D; //direction
         cin >> x >> D;
-        // cout << init << endl;
-        if(D == 'R') {
-            for(int j = init; j <= init + x; j++) arr[j]++;
-            init = init + x;
-        } else if(D == 'L'){
-            for(int j = init; j >= init - x; j--) arr[j]++;
-            init = init - x;
-        }
-        // cout << init << endl;
-    }
-    int chk = 0;
-    int cnt = 0;
-    for(int i = 0; i < MAX_N; i++) {
-        if(arr[i] >= 2) {
-            if(chk == 0) cnt--;
-            cnt++;
-            chk++;
-            // cout << i << " " << cnt << endl;
-        } else chk = 0;
 
+        if(D == 'R') {
+            x1[i] = cur;
+            x2[i] = cur + x;
+            cur += x;
+        } else if(D == 'L'){
+            x1[i] = cur - x;
+            x2[i] = cur;
+            cur -= x;
+        }
+
+        x1[i] += OFFSET;
+        x2[i] += OFFSET;
+    }
+
+    for(int i = 0; i < n; i++) {
+        for(int j = x1[i]; j < x2[i]; j++) {
+            checked[j]++;
+        }
+    }
+    int cnt = 0;
+    for(int i = 0; i < MAX_R; i++) {
+        if(arr[i] >= 2) {
+            cnt++;
+            // cout << i << " " << arr[i] << endl;
+        }
     }
     cout << cnt;
     return 0;
