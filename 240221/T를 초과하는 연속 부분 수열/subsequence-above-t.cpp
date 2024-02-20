@@ -10,7 +10,7 @@ int main() {
     int cnt = 0, max = 0;
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
-        if(arr[i] > 3) {
+        if(arr[i] > t) {
             cnt++;
         } else {
             if(cnt > max) max = cnt;
