@@ -14,18 +14,23 @@ int main() {
     string str; //cin buffer
     cin >> str;
     for(int i = 0; i < 7; i ++) {
-        if(str == arr2[i]) wd = -i; // 요일 순서 저장
+        if(str == arr2[i]) wd = i; // 요일 순서 저장
     }
     
+    int cnt = 0;
     while(true) {
+        if(m1 == m2 && d1 == d2) break;
         d1++;
         wd++;
-        if(m1 == m2 && d1 == d2) break;
-        if(d1 >= arr1[m1]) {
-            d1 = 0;
+        if(d1 > arr1[m1]) {
+            d1 = 1;
             m1++;
         }
+        if(wd > 6) {
+            wd = 0;
+            cnt++;
+        }
     }
-    cout << wd/7+1;
+    cout << cnt;
     return 0;
 }
