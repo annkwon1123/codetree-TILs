@@ -54,6 +54,7 @@ int main() {
     for(i = 1; i < time; i++) {
         if(locA[i] == locB[i]) break;
     }
+    if(i >= time) i = -1;
     cout << i;
 
     return 0;
