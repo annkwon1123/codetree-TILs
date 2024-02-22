@@ -16,9 +16,9 @@ int main() {
         cin >> v >> t;
         
         for(int j = 0; j < t; j++) {
-            arrA[time + j] = loc + v;
+            arrA[time + j] += loc;
+            loc += v;
         }
-        loc += v * t;
         time += t;
     }
     time = 0, loc = 0;
@@ -26,18 +26,31 @@ int main() {
         cin >> v >> t;
         
         for(int j = 0; j < t; j++) {
-            arrB[time + j] = loc + v;
+            arrB[time + j] += loc;
+            loc += v;
         }
-        loc += v * t;
         time += t;
     }
-
+    int i;
     int cnt = 0, flag = 0;
-    if(arrA[1] > arrB[1]) flag = 0;
-    else if(arrA[1] < arrB[1]) flag = 1;
+    for(i = 0; i < time; i++) {
+        if(arrA[i] > arrB[i]) {
+            flag = 0;
+            break;
+        }
+        else if(arrA[i] < arrB[i]) {
+            flag = 1;
+            break;
+        }
+    }
+    if(i >= time) {
+        cout << cnt;
+        return 0;
+    }
 
-    for(int i = 1; i < time; i++) {
-        if(flag == 1 && arrA[i] > arrB[i]) {
+    for(i = i+1; i < time; i++) {
+        if(arrA[i] == arrB[i]) continue;
+        else if(flag == 1 && arrA[i] > arrB[i]) {
             cnt++;
             flag = 0;
         }
@@ -46,7 +59,10 @@ int main() {
             flag = 1;
         }
     }
-
+    // for(i = 0; i < time; i++) cout << arrA[i] << " ";
+    // cout << endl;
+    // for(i = 0; i < time; i++) cout << arrB[i] << " ";
+    // cout << endl;
     cout << cnt;
     return 0;
 }
