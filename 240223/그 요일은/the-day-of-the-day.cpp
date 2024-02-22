@@ -25,7 +25,7 @@ int main() {
     
     int diff = Days(m2,d2) - Days(m1,d1);
     // cout << Days(m2,d2) << " " << Days(m1,d1) << endl;
-    if(wd == 0) cout << (diff+wd)/7;
+    if(wd == 0 || wd < (diff+wd)%7) cout << (diff+wd)/7;
     else cout << (diff+wd)/7 - 1;
     return 0;
 }
