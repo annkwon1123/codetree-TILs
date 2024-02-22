@@ -53,7 +53,7 @@ int main() {
 
     int cnt = 0;
     for(int i = 1; i < MAX_N; i++) {
-        if(((robotA[i-1] != robotA[i]) || (robotB[i-1] != robotB[i])) && (robotA[i] == robotB[i])) cnt ++;
+        if((robotA[i-1] != robotA[i]) && (robotB[i-1] != robotB[i]) && (robotA[i] == robotB[i])) cnt ++;
     }
     cout << cnt;
     return 0;
