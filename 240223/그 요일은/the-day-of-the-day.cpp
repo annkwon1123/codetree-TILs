@@ -27,7 +27,7 @@ int main() {
     // cout << Days(m2,d2) - Days(m1,d1) << endl;
 
     int cnt = diff/7; // 몇 주가 있는지
-    if(diff != 0 && wd <= diff%7) cnt ++;
+    if(diff == 0 && wd <= diff%7) cnt ++;
     // cout << diff/7 << " " << diff%7 << endl;
     cout << cnt;
     return 0;
