@@ -14,7 +14,7 @@ int main() {
     int m1,d1,m2,d2;
     cin >> m1 >> d1 >> m2 >> d2;
 
-    string arr2[7] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+    string arr2[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
     
     int wd = 0; // week day
     string str; //cin buffer
@@ -25,7 +25,9 @@ int main() {
     
     int diff = Days(m2,d2) - Days(m1,d1);
     // cout << Days(m2,d2) << " " << Days(m1,d1) << endl;
-    if(wd == 0 || wd < (diff+wd)%7) cout << (diff+wd)/7;
-    else cout << (diff+wd)/7 - 1;
+
+    int cnt = diff/7;
+    if(wd > diff%7) cnt --;
+    cout << cnt;
     return 0;
 }
