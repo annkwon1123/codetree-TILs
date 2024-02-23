@@ -11,8 +11,8 @@ int main() {
     cin >> r >> c >> d;
 
     int dir_num;
-    if(d == 'U') dir_num = 0; // 아래
-    else if(d == 'D') dir_num = 1; // 위
+    if(d == 'U') dir_num = 1; // 아래
+    else if(d == 'D') dir_num = 0; // 위
     else if(d == 'L') dir_num = 2; // 왼쪽
     else dir_num = 3; // 오른쪽
 
@@ -34,12 +34,13 @@ int main() {
         }
         if(r < 1) {
             r = 1;
-            dir_num = 1; // 위쪽으로 방향 바꾸기
+            dir_num = 0; // 위쪽으로 방향 바꾸기
         }
         else if(r > n) {
             r = n;
-            dir_num = 0; // 아래쪽으로 방향 바꾸기
+            dir_num = 1; // 아래쪽으로 방향 바꾸기
         }
+
         // cout << r << " " << c << " " << dir_num << endl;
     }
 
