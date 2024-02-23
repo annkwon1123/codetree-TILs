@@ -32,6 +32,9 @@ int main() {
         }
     }
 
+    // for(int i = 0; i < MAX_N; i++) cout << robotA[i] << " ";
+    // for(int i = 0; i < MAX_N; i++) cout << robotB[i] << " ";
+
     time = 0, cur = 0;
     for(int i = 0; i < m; i++) {
         cin >> t >> d;
@@ -53,7 +56,7 @@ int main() {
 
     int cnt = 0;
     for(int i = 1; i < MAX_N; i++) {
-        if((robotA[i-1] != robotA[i]) && (robotB[i-1] != robotB[i]) && (robotA[i] == robotB[i])) cnt ++;
+        if(((robotA[i-1] != robotB[i-1])) && (robotA[i] == robotB[i])) cnt ++;
     }
     cout << cnt;
     return 0;
