@@ -26,12 +26,12 @@ int main() {
     for(int i = 0; i < T; i++) {
         x = v[i].second.first;
         y = v[i].second.second;
-        
-        if(people[x] <= K && (people[x] > 0 && people[y] == 0)) {
+
+        if(people[x] <= K && people[x] > 0) {
             people[x]++;
             people[y]++;
         }
-        else if(people[y] <= K && (people[y] > 0 && people[x] == 0)) {
+        else if(people[y] <= K && people[y] > 0) {
             people[x]++;
             people[y]++;
         }
