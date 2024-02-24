@@ -17,6 +17,11 @@ int main() {
         cin >> r >> c;
         X = r-1;
         Y = c-1;
+
+        if(arr[X][Y] != 0) {
+            cout << 0 << endl;
+            continue;
+        }
         arr[X][Y] = 1;
 
         if(arr[X+dx[0]][Y+dy[0]] == 1) cnt ++;
@@ -27,6 +32,7 @@ int main() {
         if(cnt == 3) cout << 1 << endl;
         else cout << 0 << endl;
         cnt = 0;
+
     }
     return 0;
 }
