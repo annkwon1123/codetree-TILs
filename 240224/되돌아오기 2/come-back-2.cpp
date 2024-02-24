@@ -27,8 +27,9 @@ int main() {
         }
         if(X == 0 && Y == 0) break;
     }
-
-    cout << i+1;
+    
+    if(X != 0 && Y != 0) cout << -1;
+    else cout << i+1;
 
     return 0;
 }
