@@ -18,17 +18,14 @@ int main() {
         X = r-1;
         Y = c-1;
         
-        if(arr[X][Y] == 1) {
-            cout << 0 << endl;
-            continue;
+        if(arr[X][Y] == 0) {
+            arr[X][Y] = 1;
+
+            if(arr[X+dx[0]][Y+dy[0]] == 1) cnt ++;
+            if(arr[X+dx[1]][Y+dy[1]] == 1) cnt ++;
+            if(arr[X+dx[2]][Y+dy[2]] == 1) cnt ++;
+            if(arr[X+dx[3]][Y+dy[3]] == 1) cnt ++;
         }
-
-        arr[X][Y] = 1;
-
-        if(arr[X+dx[0]][Y+dy[0]] == 1) cnt ++;
-        if(arr[X+dx[1]][Y+dy[1]] == 1) cnt ++;
-        if(arr[X+dx[2]][Y+dy[2]] == 1) cnt ++;
-        if(arr[X+dx[3]][Y+dy[3]] == 1) cnt ++;
 
         if(cnt == 3) cout << 1 << endl;
         else cout << 0 << endl;
