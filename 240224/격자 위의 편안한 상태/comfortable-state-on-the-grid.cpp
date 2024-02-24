@@ -17,11 +17,12 @@ int main() {
         cin >> r >> c;
         X = r-1;
         Y = c-1;
-
-        if(arr[X][Y] != 0) {
+        
+        if(arr[X][Y] == 1) {
             cout << 0 << endl;
             continue;
         }
+
         arr[X][Y] = 1;
 
         if(arr[X+dx[0]][Y+dy[0]] == 1) cnt ++;
