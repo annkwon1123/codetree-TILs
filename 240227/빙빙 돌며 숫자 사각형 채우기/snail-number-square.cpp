@@ -16,7 +16,12 @@ int main() {
     // 여기에 코드를 작성해주세요.
     cin >> n >> m;
 
-    int answer[n][m] = {0, };
+    int answer[n][m];
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            answer[i][j] = 0;
+        }
+    }
     answer[x][y] = 1;
 
     for(int i = 2; i <= n * m; i++) {
