@@ -24,7 +24,7 @@ int main() {
     int dir_num = 0;
 
     for(int i = 0; i < n * m; i++) {
-        arr[x][y] = char(int('A') + i%28);
+        arr[x][y] = char(int('A') + i%26);
 
         nx = x + dx[dir_num], ny = y + dy[dir_num];
 
