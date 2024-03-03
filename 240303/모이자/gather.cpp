@@ -12,7 +12,7 @@ int main() {
     int arr[n];
     for(int i = 0; i < n; i++) cin >> arr[i];
 
-    int min_sum = 999;
+    int min_sum = 99999999;
     for(int i = 0; i < n; i++) {
 
         int sum_diff = 0;
