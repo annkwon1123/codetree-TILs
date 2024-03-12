@@ -12,13 +12,13 @@ int main() {
 
     for(int i = 0; i < n; i++) {
         cin >> x1 >> x2;
-        for(int k = x1; k <= x2; k++) {
-            arr[k]++;
+        for(int j = x1; j <= x2; j++) {
+            arr[j]++;
         }
     }
 
     for(int i = 0; i < MAX_N; i++) {
-        if(arr[i] > 2) {
+        if(arr[i] == n) {
             cout << "Yes";
             return 0;
         }
